@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#669999</color>
+    <color name="colorPrimaryDark">#476b6b</color>
+    <color name="colorAccent">#222c4b</color>
+    <!--  <color name="colorAccent">#D81B60</color>  222c4b-->
+    <color name="Goldenyellow">#FAAA1A</color>
+    <!--  <color name="Metallicgold">#D4AF37</color>-->
+    <color name="Metallicgold">#9c6c24</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_green">#8FD143</color>
+    <color name="grey">#A7A2A2</color>
+    <color name="darkgreen">#036307</color>
+    <color name="green">#04910A</color>
+    <color name="red">#F44336</color>
+    <color name="darkgrey">#636363</color>
+    <color name="dark">#DF3C08</color>
+    <color name="darkMixBlue">#FFFEFE</color>
+
+
+    <color name="lightred">#ff4444</color>
+    <color name="darkred">#e5343d</color>
+    <color name="bluee">#009688</color>
+
+    <color name="lightgrey">#E2E2E2</color>
+
+    <color name="textcolor">#000000</color>
+
+    <color name="Parrotgreen">#009999</color>
+    <color name="orange">#eb6325</color>
+    <color name="lightred1">#F37A43</color>
+</resources>

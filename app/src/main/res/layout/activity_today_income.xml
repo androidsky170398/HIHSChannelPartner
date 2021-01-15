@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#eaeaea"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.TodayIncome">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/menuImg"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/menuImg"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="Today Income"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_logout"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#eaeaea"
+        android:layout_height="match_parent"
+        tools:context=".UI.TodayIncome">
+
+        <LinearLayout
+            android:background="#eaeaea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+
+                android:background="#99cfff"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:fontFamily="serif"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:gravity="center_horizontal"
+                    android:text="* After completing the first three steps, you can apply for ...."
+                    android:textColor="@color/red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="80"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="  "
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_hospital"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="Hospital"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR1"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text=""
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_doctor"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="Doctor"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR3"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="60"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text=""
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_pathology"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="Pathology"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view7"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR4"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="30"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text=""
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_ambulance"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="Ambulance"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view6"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR2"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text=""
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-90dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            app:srcCompat="@drawable/ic_pathology" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="*****"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view5"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/PROGRESS_BAR6"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="35dp"
+                            android:max="100"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/progress" />
+
+
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-85dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text=""
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_pathology"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignLeft="@id/PROGRESS_BAR"
+                            android:layout_alignTop="@id/PROGRESS_BAR"
+                            android:layout_alignRight="@id/PROGRESS_BAR"
+                            android:layout_alignBottom="@id/PROGRESS_BAR"
+                            android:layout_marginTop="-90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="5dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="130dp"
+                        android:text="*****"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="147dp"
+                        android:text="Income"
+                        android:textColor="#a6a6a6"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
